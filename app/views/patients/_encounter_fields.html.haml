@@ -1,0 +1,9 @@
+.form-inline.clearfix
+  .nested-fields
+    = f.input :visit_number, input_html: { class: 'form-input form-control' }
+    = f.input :admitted_at, input_html: { class: 'form-input form-control' }
+    = f.input :discharged_at, input_html: { class: 'form-input form-control' }
+    = f.input :location, input_html: { class: 'form-input form-control' }
+    = f.input :room, input_html: { class: 'form-input form-control' }
+    = f.input :bed, input_html: { class: 'form-input form-control' }
+    = link_to_remove_association "Remove", f, class "form-button btn btn-default"

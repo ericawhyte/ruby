@@ -7,6 +7,7 @@ class CreateEncounters < ActiveRecord::Migration
       t.string :location
       t.string :room
       t.string :bed
+      t.belongs_to :patient, index: true
 
       t.timestamps null: false
     end

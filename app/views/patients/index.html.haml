@@ -1,0 +1,6 @@
+- @patient.each_slice(3) do |patients|
+  .row
+    - patients.each do |patient|
+      .col-md-4
+        .patient
+          %h2= link_to patient.last_name, patient

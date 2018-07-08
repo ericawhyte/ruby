@@ -1,0 +1,28 @@
+.main_content
+  #patient_top.row  
+    .col-md-12
+      #patient_info
+        %h1= @patient.last_name
+        %p= @patient.middle_name
+        %p= @patient.first_name
+        %p= @patient.weight
+        %p= @patient.height
+        %p= @patient.mrn
+  .row
+    .col-md-12
+      #encounters
+        %h2 Encounters
+        %ul
+          - @patient.encounters.each do |encounter|
+            %li
+              %h3= encounter.visit_number
+              %p= encounter.admitted_at 
+              %p= encounter.discharged_at
+              %p= encounter.location
+              %p= encounter.room
+              %p= encounter.bed
+  .row
+    .col-md-12
+      = link_to "Back", root_path, class: "btn btn-default"
+      = link_to "Edit", edit_patient_path, class: "btn btn-default"
+      = link_to "Delete", patient_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default"

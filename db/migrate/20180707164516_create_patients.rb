@@ -4,8 +4,8 @@ class CreatePatients < ActiveRecord::Migration
       t.text :first_name
       t.text :middle_name
       t.text :last_name
-      t.number :weight
-      t.number :height
+      t.integer :weight
+      t.integer :height
       t.string :mrn
 
       t.timestamps null: false
