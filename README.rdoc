@@ -1,28 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I've tried to dockerize this
 
-Things you may want to cover:
+`docker-compose build` will build it
+`docker-compose up` will bring it up
+`docker-compose up --build` will build and bring it up
+`docker-compose exec web rake db:migrate` will run the db:migrate
 
-* Ruby version
+you'll probably need to delete the server.pid in the tmp directory and then run build 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I'm currently having an error in the embedded forms for encounters.  I can't quite figure out why there's not patient_id in the encounters
